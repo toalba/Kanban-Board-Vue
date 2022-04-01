@@ -1,15 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Button class="btn-danger">Click me</Button>
+  <KBoard></KBoard>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
+import KBoard from "@/components/KBoard";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    KBoard
   }
 }
 </script>
