@@ -1,9 +1,11 @@
 <template>
-  <table class="">
-    <tr>
-      <th v-for="erows in krows" :key="erows">{{erows}}</th>
-    </tr>
-  </table>
+  <div class="container">
+    <table class="table-bordered">
+      <tr>
+        <th scope="col" v-for="erows in krows" :key="erows">{{erows}} </th>
+      </tr>
+    </table>
+  </div>
 </template>
 
 <script>

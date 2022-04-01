@@ -1,5 +1,4 @@
 <template>
-  <Button class="btn-danger">Click me</Button>
   <KBoard></KBoard>
 </template>
 
@@ -14,7 +13,7 @@ export default {
   }
 }
 </script>
-
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
