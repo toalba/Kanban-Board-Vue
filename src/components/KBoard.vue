@@ -12,6 +12,9 @@
           <template  #item="{element}">
             <KMessage :name="element.name" v-if="element.krow===elem"></KMessage>
           </template>
+          <template #footer>
+            <button @click="addPeople">Add</button>
+          </template>
         </vuedraggable>
       </div>
     </div>
