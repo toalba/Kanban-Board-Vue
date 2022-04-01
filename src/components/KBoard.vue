@@ -33,6 +33,7 @@ export default {
       krows: ["Backlog","Offen","In Bearbeitung","Done"],
       tasks: [
         {name:"Vue verstehen",krow:"In Bearbeitung"},
+        {name:"Duras",krow:"In Bearbeitung"},
         {name:"Kanban bauen",krow:"Offen"}
       ]
     }
