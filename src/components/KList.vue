@@ -3,7 +3,8 @@
     <h3>{{ elem }}</h3>
     <vuedraggable class="list-group kanban-colum" :model-value="aufg" group="aufgaben" @start="drag=true" @end="drag=false" item-key="id">
       <template  #item="{element}">
-        <div v-if="element.krow===elem">{{element.name}}</div>
+        <div class="list-group-item" v-if="element.krow===elem">{{element.name}}</div>
+
       </template>
     </vuedraggable>
   </div>
