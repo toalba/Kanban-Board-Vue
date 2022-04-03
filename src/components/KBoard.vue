@@ -6,30 +6,17 @@
   </div>
   <div class="row mt-5">
     <div v-for="elem in krows" :key="elem" class="col-3">
-      <div class="p-2 alert alert-secondary">
-        <h3>{{ elem }}</h3>
-        <vuedraggable class="list-group kanban-colum" :model-value="tasks"  group="aufgaben" @start="drag=true" @end="drag=false" item-key="id">
-          <template  #item="{element}">
-            <KMessage :name="element.name" v-if="element.krow===elem"></KMessage>
-          </template>
-          <template #footer>
-            <button @click="addPeople">Add</button>
-          </template>
-        </vuedraggable>
-      </div>
+      <KList :aufg="tasks" :elem="elem"></KList>
     </div>
   </div>
-  <KMessage :name="'Test'"></KMessage>
 </template>
 
 <script>
 //import KList from "@/components/KList";
-import vuedraggable from "vuedraggable";
-import KMessage from "@/components/KMessage";
+import KList from "@/components/KList";
 export default {
   components: {
-    KMessage,
-    vuedraggable,
+    KList
   },
   name: "KBoard",
   data() {

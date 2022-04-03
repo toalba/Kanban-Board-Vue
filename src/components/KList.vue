@@ -1,10 +1,9 @@
 <template>
   <div class="p-2 alert alert-secondary">
     <h3>{{ elem }}</h3>
-    <vuedraggable class="list-group kanban-colum" :model-value="aufg" group="aufgaben" @start="drag=true" @end="drag=false" item-key="id">
+    <vuedraggable class="list-group kanban-colum" :list="aufg" group="Kanbanliste" @start="drag=true" @end="drag=false" @drop="dropfunction" item-key="name">
       <template  #item="{element}">
-        <div class="list-group-item" v-if="element.krow===elem">{{element.name}}</div>
-
+        <KMessage :name="element.name" v-if="element.krow===elem"></KMessage>
       </template>
     </vuedraggable>
   </div>
@@ -12,10 +11,13 @@
 
 <script>
 import vuedraggable from "vuedraggable"
+import KMessage from "@/components/KMessage";
 
 export default {
   components:{
-    vuedraggable
+    vuedraggable,
+    KMessage
+
   },
   name: "KList",
   props: {
@@ -26,12 +28,17 @@ export default {
     return {
       drag: false,
     }
+  },
+  methods:{
+    dropfunction(){
+
+    }
   }
 }
 </script>
 
 <style scoped>
   .kanban-colum{
-    min-height: 300px;
+    min-height: 50vh;
   }
 </style>
